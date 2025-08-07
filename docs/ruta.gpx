@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="4.626371400000000" minlon="-74.067185400000000" maxlat="4.631426900000000" maxlon="-74.064422699999994"/></metadata>                  
+<trk>
+  <name>Línea 9</name>
+  <extensions>
+  </extensions>
+  <trkseg>
+    <trkpt lat="4.6263714" lon="-74.0657317">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6282856" lon="-74.0653132">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6310874" lon="-74.0644227">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6311302" lon="-74.0650826">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6314269" lon="-74.0664907">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6314029" lon="-74.0665497">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6309671" lon="-74.0666517">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.630202" lon="-74.0667498">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.62816" lon="-74.0671103">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6277215" lon="-74.0671854">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.627636" lon="-74.0666865">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6275397" lon="-74.0661233">
+        <ele>0.0</ele>
+    </trkpt>
+    <trkpt lat="4.6281172" lon="-74.0659945">
+        <ele>0.0</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+</gpx>

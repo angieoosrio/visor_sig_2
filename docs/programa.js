@@ -1,29 +1,47 @@
-// Crear el mapa centrado en Bogotá
-const mapa = L.map('mapa').setView([4.7110, -74.0721], 13);
+const map = L.map('map').setView([4.628, -74.065], 16);
 
-// Capa base
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
+// Capa satelital ESRI
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles © Esri',
     maxZoom: 19
-}).addTo(mapa);
+}).addTo(map);
 
-// Cargar archivo GPX sin waypoints para evitar errores por íconos
-const gpx = new L.GPX("POO1.gpx", {
+// Ruta GPX
+new L.GPX("ruta.gpx", {
     async: true,
     marker_options: {
-        startIconUrl: 'https://unpkg.com/leaflet-gpx@1.7.0/pin-icon-start.png',
-        endIconUrl: 'https://unpkg.com/leaflet-gpx@1.7.0/pin-icon-end.png',
-        shadowUrl: 'https://unpkg.com/leaflet-gpx@1.7.0/pin-shadow.png',
-        wptIcons: false
-    },
-    polyline_options: {
-        color: 'blue',
-        weight: 4,
-        opacity: 0.75
+        startIconUrl: null,
+        endIconUrl: null,
+        shadowUrl: null
     }
+}).on('loaded', function(e) {
+    map.fitBounds(e.target.getBounds());
+}).addTo(map);
+
+// Ícono personalizado
+const customIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/854/854878.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32]
 });
 
-// Escuchar cuando se cargue y añadir al mapa
-gpx.on('loaded', function(e) {
-    mapa.fitBounds(e.target.getBounds());
-}).addTo(mapa);
+// Cargar los puntos
+fetch('puntos.gpx')
+    .then(res => res.text())
+    .then(gpxText => {
+        const parser = new DOMParser();
+        const gpxDoc = parser.parseFromString(gpxText, "application/xml");
+        const points = gpxDoc.getElementsByTagName("wpt");
+
+        for (let i = 0; i < points.length; i++) {
+            const point = points[i];
+            const lat = point.getAttribute("lat");
+            const lon = point.getAttribute("lon");
+            const imgNumber = i + 1;
+            const imageUrl = `img/img${imgNumber}.png`; // ✅ Cambiado a carpeta img/
+
+            const marker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
+            marker.bindPopup(`<img src="${imageUrl}" width="200" alt="Imagen ${imgNumber}">`);
+        }
+    });

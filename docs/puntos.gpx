@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="4.626207500000000" minlon="-74.067107399999998" maxlat="4.631406400000000" maxlon="-74.064566499999998"/></metadata>                  
+<wpt lat="4.6262075" lon="-74.0658092">
+  <name>Punto 1</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6280861" lon="-74.0653609">
+  <name>Punto 2</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6308691" lon="-74.0645665">
+  <name>Punto 3</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6314064" lon="-74.0664762">
+  <name>Punto 4</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.630202" lon="-74.0667498">
+  <name>Punto 5</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6280978" lon="-74.0671074">
+  <name>Punto 6</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6275881" lon="-74.0666673">
+  <name>Punto 7</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="4.6280113" lon="-74.0660016">
+  <name>Punto 8</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>
